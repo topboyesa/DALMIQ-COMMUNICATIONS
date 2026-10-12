@@ -98,7 +98,7 @@ main {
     padding-left: 0.8rem;
 }
 
-/* Professional E-Commerce Product Cards (Exact match to reference style) */
+/* Professional E-Commerce Product Cards */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -164,11 +164,6 @@ main {
     margin-top: 1.5rem;
 }
 
-.image-container {
-    margin-top: 1.5rem;
-    text-align: center;
-}
-
 .content-section img {
     width: 100%;
     height: 240px;
@@ -182,16 +177,7 @@ main {
     transform: scale(1.02);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2.5rem;
-    background-color: #121212;
-    color: #9ca3af;
-    margin-top: 4rem;
-    width: 100%;
-}
-/* Side-by-Side Service Rows (Text Left, Image Right) */
+/* Side-by-Side Service Rows */
 .service-row {
     display: flex;
     align-items: center;
@@ -211,13 +197,12 @@ footer {
 .service-img img {
     width: 100%;
     height: 380px;
-    object-fit: cover; /* Crops the portrait photo cleanly into a neat card */
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
 }
 
-/* Responsive fallback for mobile screens: stacks text above image on small phones */
 @media (max-width: 768px) {
     .service-row {
         flex-direction: column;
@@ -237,7 +222,50 @@ footer {
     font-size: 1.1rem;
     font-weight: 700;
     color: #121212;
-    background-color: #ffffff; /* Brand yellow background */
+    background-color: #facc15; 
     padding: 0.3rem 0.8rem;
     border-radius: 6px;
+}
+
+/* Footer & Merged Contact Section Styles */
+footer {
+    background-color: #121212;
+    color: #e5e7eb;
+    padding: 4rem 6% 2rem 6%;
+    margin-top: 4rem;
+    width: 100%;
+    scroll-margin-top: 100px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    color: #facc15; /* Yellow highlight for section titles */
+    margin-bottom: 1rem;
+}
+
+.footer-column p {
+    font-size: 1rem;
+    color: #d1d5db;
+    line-height: 1.8;
+}
+
+.footer-column strong {
+    color: #facc15; /* Yellow highlight for labels like Location, Office No, etc. */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
 }
