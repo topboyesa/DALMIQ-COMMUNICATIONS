@@ -1,0 +1,128 @@
+/* General Reset & Smooth Scrolling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Top Menu Styling */
+header {
+    background-color: #1f2937;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #d1d5db;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Main Content & Sections */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    scroll-margin-top: 100px;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+/* Service Blocks */
+.service-block {
+    margin-top: 1.5rem;
+}
+
+.service-block h3 {
+    font-size: 1.3rem;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Image Grid Layout for Multiple Photos */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.image-container {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.content-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-section img:hover {
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1f2937;
+    color: #9ca3af;
+    margin-top: 3rem;
+}
