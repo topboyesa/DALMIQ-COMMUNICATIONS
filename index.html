@@ -9,9 +9,11 @@
 </head>
 <body>
 
-    <header>
+<header>
         <div class="logo-container">
-            <h1>DALMIQ COMMUNICATIONS</h1>
+            <a href="#home">
+                <img src="images/dalmiq-logo.png" alt="Dalmiq Communications Logo" class="site-logo">
+            </a>
         </div>
         <nav>
             <ul class="nav-links">
@@ -19,6 +21,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleCartDrawer()" class="cart-nav-link">🛒 Cart <span id="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
@@ -49,8 +52,9 @@
                     <div class="service-text">
                         <p><strong>Computer Packages:</strong> 
                             Learn the basics of computer operation and software applications with our expert instructors.<br>
-                            <span class="price-tag">Kshs 3,500 </span>
+                            <span class="price-tag">Kshs 3,500</span>
                         </p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Computer Packages', 3500)">Add to Cart</button>
                     </div>
                     <div class="service-img">
                         <img src="images/computer-training.jpeg" alt="Computer training session at Dalmiq">
@@ -66,7 +70,8 @@
                         <div class="product-info">
                             <span class="product-category">Storage</span>
                             <h4 class="product-title">Hard Disks</h4>
-                            <p class="product-price">Available in store</p>
+                            <p class="product-price">Kshs 4,500</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('Hard Disks', 4500)">Add to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -74,7 +79,8 @@
                         <div class="product-info">
                             <span class="product-category">Office Supplies</span>
                             <h4 class="product-title">Envelopes</h4>
-                            <p class="product-price">Available in store</p>
+                            <p class="product-price">Kshs 150</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('Envelopes', 150)">Add to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -82,7 +88,8 @@
                         <div class="product-info">
                             <span class="product-category">Printing</span>
                             <h4 class="product-title">Printer Inks</h4>
-                            <p class="product-price">Available in store</p>
+                            <p class="product-price">Kshs 2,500</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('Printer Inks', 2500)">Add to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
@@ -91,6 +98,7 @@
                             <span class="product-category">Office Supplies</span>
                             <h4 class="product-title">Ream Papers</h4>
                             <p class="product-price">Kshs 700</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('Ream Papers', 700)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -119,27 +127,47 @@
         </section>
     </main>
 
+    <!-- Slide-out Cart Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button onclick="toggleCartDrawer()" class="close-drawer-btn">✕</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items-container">
+            <p class="empty-cart-text">Your cart is empty</p>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total">Kshs 0</span>
+            </div>
+            <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout (M-PESA)</button>
+        </div>
+    </div>
+
     <!-- Merged Footer & Contact Section -->
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Contacts</h3>
                 <p>
-                   <strong>Location:</strong> Sega<br>
-                   <strong>Office No:</strong> 0743844441<br>
-                   <strong>M-PESA No:</strong> 0702614447<br>
-                   <strong>General E-mail:</strong> cdalmiq@gmail.com<br>
-                   <strong>Official E-mail:</strong> info.dalmiq@gmail.com
+                   Location: Sega<br>
+                   Office No: 0743844441<br>
+                   M-PESA No: 0702614447<br>
+                   General E-mail: cdalmiq@gmail.com<br>
+                   Official E-mail: info.dalmiq@gmail.com
                 </p>
             </div>
             
             <div class="footer-column">
                 <h3>Opening Hours</h3>
                 <p>
-                    <strong>Weekdays:</strong> 8:30 AM - 7:00 PM<br>
-                    <strong>Saturdays:</strong> 9:00 AM - 7:00 PM<br>
-                    <strong>Public Holidays:</strong> 9:00 AM - 3:30 PM<br>
-                    <strong>Closed On Sundays</strong>
+                    Weekdays: 8:30 AM - 7:00 PM<br>
+                    Saturdays: 9:00 AM - 7:00 PM<br>
+                    Public Holidays: 9:00 AM - 3:30 PM<br>
+                    Closed On Sundays
                 </p>
             </div>
         </div>

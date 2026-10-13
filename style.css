@@ -269,3 +269,138 @@ footer {
     color: #9ca3af;
     font-size: 0.9rem;
 }
+/* E-Commerce Add to Cart Buttons */
+.add-to-cart-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0.8rem;
+    background-color: #facc15;
+    color: #121212;
+    border: none;
+    padding: 0.6rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #eab308;
+    transform: translateY(-1px);
+}
+
+/* Cart Badge in Navigation */
+.cart-nav-link {
+    background: #27272a;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #3f3f46;
+}
+
+#cart-count {
+    background: #facc15;
+    color: #121212;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* Slide-out Cart Drawer Styling */
+.cart-drawer {
+    position: fixed;
+    right: -380px;
+    top: 0;
+    width: 360px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 2000;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.8rem;
+}
+
+.cart-header h3 {
+    color: #121212;
+    font-size: 1.2rem;
+}
+
+.close-drawer-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #4b5563;
+}
+
+.cart-items-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 1rem 0;
+}
+
+.empty-cart-text {
+    color: #6b7280;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cart-footer {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #121212;
+    margin-bottom: 1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #15803d;
+}
+
+/* Logo Styling in Header */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 55px; /* Adjust height to fit nicely inside your sticky header */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.03);
+}
