@@ -129,3 +129,15 @@ async function submitMpesaPayment() {
         alert("Could not connect to payment server. Make sure your local PHP server is running.");
     }
 }
+
+function toggleMenu() {
+    const nav = document.querySelector('header nav');
+    const isOpen = nav.classList.toggle('open');
+    document.querySelector('.menu-toggle').setAttribute('aria-expanded', isOpen);
+}
+
+// Close the menu after tapping a link
+document.querySelectorAll('.nav-links a').forEach(link =>
+    link.addEventListener('click', () =>
+        document.querySelector('header nav').classList.remove('open'))
+);
